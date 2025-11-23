@@ -1,7 +1,95 @@
 EnergInAI — Company Overview
 
-1. What is EnerginAI?
-EnergInAI ek smart home energy analytics platform hai. Yeh 24 hours tak customer ke ghar ka electricity usage record karta hai aur real-time data ke basis par accurate solar & savings report generate karta hai.
+EnergInAI — Company Knowledge Base
+
+About EnergInAI
+EnergInAI is a smart energy–analytics company that installs an energy monitoring device in a customer’s home for 24 hours. The device collects real-time electricity usage data from appliances such as lights, fans, AC, refrigerator, TV, and other home loads.
+
+After collecting data, EnergInAI generates a detailed energy report with personalized recommendations, possible savings, and solar feasibility analysis.
+
+2. What the device does
+- Tracks hourly electricity consumption
+- Detects power spikes from appliances
+- Measures active power, reactive power, voltage, current
+- Identifies abnormal appliance behavior
+- Sends all data to EnergInAI backend servers
+- Helps generate accurate solar sizing and savings predictions
+
+3. Problems we solve
+- High electricity bills
+- Unidentified appliance power consumption
+- Wrong solar panel sizing
+- Wrong battery recommendations
+- Load imbalance
+- Power factor issues
+- Voltage fluctuations
+- Appliance efficiency loss
+
+4. Common customer queries & answers
+Q: “Mere ghar ka solar kitna bacha sakta hai?”
+A: Savings depend on your monthly electricity bill, load usage pattern, and your roof area. Our device monitors your home for 24 hours and generates exact solar capacity recommendation along with estimated monthly/yearly savings.
+
+Q: “Device kya measure karta hai?”
+A: Device voltage, current, load, power factor, consumption pattern, and appliance usage record karta hai.
+
+Q: “Report kaise milti hai?”
+A: 24 hours data collection ke baad report automatic generate hoti hai aur customer ko PDF/WhatsApp/Email par send ki jati hai.
+
+Q: “Solar lagane ke baad kitni bachat hogi?”
+A: Bill, usage pattern, and panel capacity ke hisab se savings calculate hoti hai. Average customer 40–60% bill reduce karta hai.
+
+5. Solar sizing basics used by EnergInAI
+- 1 kW solar = 4 to 4.5 units/day on average
+- Standard home requires 2–5 kW system
+- Higher bill → bigger system
+- Low roof area → smaller system
+- High day usage → more savings
+- Battery required only if backup needed
+
+6. Battery sizing rule
+- Average home backup need = 3–6 hours
+- Battery size (Ah) = Load (W) × Hours ÷ Voltage
+- Lithium battery recommended for long life
+- Lead acid only for low-budget solutions
+
+7. Technical issues the chatbot should solve
+- Device not connecting → Check WiFi & power supply
+- App not updating data → Reboot gateway device
+- Report not generating → Ensure data > 20 hours collected
+- Graphs showing high spikes → Possible appliance overload
+- Negative savings → Wrong usage pattern or bill input error
+- Solar not giving expected units → Panel cleaning or shading issue
+
+8. When we send technician
+Technician visit is required when:
+- Device does not power on
+- Data is not uploaded for >6 hours
+- Voltage/current readings incorrect
+- Customer requests on-site solar feasibility check
+
+9. Words the chatbot should understand
+- Solar panel
+- Bill savings
+- Battery backup
+- Device not working
+- Technician
+- Monitoring
+- Units
+- kW / kWh
+- Load calculation
+- Wiring issue
+- Report problem
+- Analysis
+
+10. Chatbot Tone Style
+- Friendly
+- Technical but simple
+- Hindi + English mix
+- Short and accurate
+- Only EnergInAI related support and answers
+
+END OF FILE
+
 
 2. Hum kya karte hain?
 - Energy usage analysis
