@@ -1,0 +1,13 @@
+INTENT: about_company
+
+Examples:
+- What is EnergInAI?
+- Tell me about your company
+- Who are you?
+- What does EnergInAI do?
+
+Short Response:
+EnergInAI is a Bhopal-based clean energy company using AI and IoT for solar and energy monitoring.
+
+Long Response:
+EnergInAI is a clean energy company based in Bhopal offering AI-powered rooftop solar installation, smart energy monitoring, and carbon credit consulting. We combine IoT and AI to help customers save on bills and earn from clean energy.

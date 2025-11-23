@@ -1,0 +1,18 @@
+INTENT: device_features + device_price
+
+Examples:
+- What does your device do?
+- How does your AI system work?
+- What is the device cost?
+
+Short Response:
+Tracks solar, grid, consumption with AI alerts.
+Single-phase ₹4,999; Three-phase ₹9,999
+
+Long Response:
+The EnergInAI smart device monitors solar generation, power consumption, grid import/export, and power factor. It provides AI alerts for low generation, excess load, faults, abnormal PF, and efficiency loss.
+
+Pricing:
+- Single-phase: ₹4,999  
+- Three-phase: ₹9,999  
+Subscription: ₹99/month (Free for solar customers)

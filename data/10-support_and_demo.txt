@@ -1,0 +1,7 @@
+INTENT: maintenance_service + credibility + book_demo + fallback
+
+Short Response:
+1-year free maintenance, verified customers, book demo online.
+
+Long Response:
+EnergInAI provides free 1-year maintenance and annual service plans. Proven installations in Bhopal with high customer satisfaction. Book demo at www.energinai.com or WhatsApp +91 79097 05494 / +91 72578 61836. For any other question, we connect you to support@energinai.com.

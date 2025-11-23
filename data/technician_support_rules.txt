@@ -1,0 +1,13 @@
+Technician Visit Rules — EnergInAI
+
+1. When do we send a technician?
+- Device not powering
+- No data for 6+ hours
+- CT sensor issue
+- Voltage error
+- Customer requests physical solar survey
+
+2. When technician is NOT needed:
+- WiFi issue
+- App not refreshing
+- Low signal

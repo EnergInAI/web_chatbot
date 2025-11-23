@@ -1,0 +1,12 @@
+INTENT: solar_subsidy
+
+Examples:
+- How much subsidy will I get for solar?
+- Government solar subsidy in 2025?
+- Tell me about MNRE subsidy
+
+Short Response:
+Subsidy: ₹30k (1 kW), ₹60k (2 kW), ₹78k (3 kW+).
+
+Long Response:
+As per MNRE 2025 (PM Surya Ghar Muft Bijli Yojana), subsidy is ₹30,000 for 1 kW, ₹60,000 for 2 kW, and ₹78,000 for 3 kW or above, subject to DISCOM verification and approval.

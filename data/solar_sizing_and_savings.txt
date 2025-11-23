@@ -1,0 +1,31 @@
+Solar Sizing & Savings – EnergInAI Knowledge
+
+1. Basic Solar Formula
+1 kW solar = 4–4.5 units/day (average)
+
+2. Home requirement
+- 1–2 BHK → 2 to 3 kW
+- 3–4 BHK → 4 to 6 kW
+
+3. Savings Calculation
+Savings = (Units Generated × Cost per Unit) – Maintenance
+
+Example:
+4 kW solar → 16 units/day  
+Bill rate = ₹8/unit  
+Daily savings = ₹128  
+Monthly savings ≈ ₹3,800  
+Yearly savings ≈ ₹45,600
+
+4. Solar depends on:
+- Roof area  
+- Bill amount  
+- Day vs night load  
+- Panel angle  
+- Shading
+
+5. Solar Problems:
+- Less units → panel shading  
+- Low savings → wrong usage pattern  
+- Excess load → system undersized
+

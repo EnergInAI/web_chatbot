@@ -1,0 +1,20 @@
+EnergInAI Device Troubleshooting
+
+1. Device not connecting:
+- Check WiFi password
+- Router distance < 8 meters
+- Restart device
+
+2. No data?
+- Device inverter output par ho sakta hai
+- MCB ON hona chahiye
+
+3. Voltage/Current wrong?
+- Loose wiring
+- CT sensor wrong placement
+- Technician needed
+
+4. Spikes in graph?
+- AC compressor start
+- Motor loads
+- Bad wiring joint

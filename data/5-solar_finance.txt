@@ -1,0 +1,12 @@
+INTENT: solar_finance
+
+Examples:
+- Do you offer loan for solar?
+- Is EMI available?
+- How to get finance?
+
+Short Response:
+Yes, 100% finance up to 5 kW available.
+
+Long Response:
+EnergInAI offers 100% financing for rooftop solar systems up to 5 kW through partnered banks. Systems above 5 kW get customized finance options.

@@ -1,0 +1,19 @@
+Battery and Backup System – EnergInAI
+
+1. Battery Sizing Formula
+Battery (Ah) = Load (W) × Backup Hours ÷ System Voltage
+
+2. Backup Requirements
+- Normal home → 3 hours
+- Heavy home → 4–6 hours
+- Office → 2 hours
+
+3. Battery Types
+- Lithium → long life, fast charge
+- Lead Acid → budget option
+
+4. Issues:
+- Backup kam → battery health low
+- Overload → inverter trip
+- Slow charging → wiring issue
+- Battery smell → needs replacement

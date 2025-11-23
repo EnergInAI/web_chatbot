@@ -1,0 +1,13 @@
+INTENT: solar_installation
+
+Examples:
+- Do you install solar panels?
+- Can you provide complete solar setup?
+- What services do you provide for solar?
+- Do you help with subsidy and net metering?
+
+Short Response:
+Yes, we provide complete end-to-end solar installation.
+
+Long Response:
+EnergInAI provides complete end-to-end solar solutions including site survey, design, subsidy application, installation, net metering, finance, and maintenance. We use Class-A quality equipment and offer a free AI-based IoT monitoring device with every system.

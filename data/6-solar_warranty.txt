@@ -1,0 +1,7 @@
+INTENT: solar_warranty
+
+Short Response:
+Panels 25 years, inverter 5 years, free maintenance 1 year.
+
+Long Response:
+25 years performance warranty on solar panels, 5 years on inverter and structure, and 1-year free maintenance with AI monitoring support.

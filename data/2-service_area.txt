@@ -1,0 +1,13 @@
+INTENT: service_area
+
+Examples:
+- Where are you located?
+- Do you work outside Bhopal?
+- Do you provide service in Indore?
+- Where do you operate?
+
+Short Response:
+We currently serve only Bhopal and nearby areas.
+
+Long Response:
+EnergInAI is headquartered in Bhopal, Madhya Pradesh. At present, we offer solar installation, device setup, and energy monitoring services only within Bhopal and nearby areas.

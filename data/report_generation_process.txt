@@ -1,0 +1,23 @@
+Report Generation Process — EnergInAI
+
+1. Device collects:
+- Active Power
+- Reactive Power
+- PF
+- Units consumed
+- Appliance patterns
+
+2. 24h data required (minimum 20h)
+
+3. Report includes:
+- Daily consumption
+- Peak load
+- Solar recommendation
+- Savings estimation
+- Battery sizing (if needed)
+- Efficiency score
+
+4. Problems:
+- Report missing → data not enough
+- Savings 0 → night usage high
+- Wrong panel size → wrong consumption input

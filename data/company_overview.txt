@@ -1,0 +1,23 @@
+EnergInAI — Company Overview
+
+1. What is EnerginAI?
+EnergInAI ek smart home energy analytics platform hai. Yeh 24 hours tak customer ke ghar ka electricity usage record karta hai aur real-time data ke basis par accurate solar & savings report generate karta hai.
+
+2. Hum kya karte hain?
+- Energy usage analysis
+- Appliance load detection
+- Solar feasibility analysis
+- Savings estimation
+- Power quality monitoring (voltage, current, PF)
+- Device-based data collection
+
+3. Why device is needed?
+Customer ke ghar ka actual load aata hai, jisse:
+- Correct solar system size
+- Correct battery size
+- Correct wiring health
+- Correct daily consumption pattern
+milta hai.
+
+4. Workflow:
+Device Install → 24h Monitoring → Data Upload → AI Report → Customer Support → Technician if required.

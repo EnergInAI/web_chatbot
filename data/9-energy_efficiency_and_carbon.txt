@@ -1,0 +1,7 @@
+INTENT: energy_efficiency + carbon_credits
+
+Short Response:
+AI energy-saving insights + carbon credit consulting.
+
+Long Response:
+The device analyzes power usage and detects wastage, high-load periods, and low PF to reduce bills. EnergInAI also helps customers generate and claim carbon credits from solar generation, creating an extra income stream.
