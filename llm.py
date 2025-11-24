@@ -52,7 +52,7 @@ def generate_answer(query, context, client_ip="unknown"):
     if not check_rate_limit(client_ip):
         return (
             "⚠️ You have reached your free query limit for now.\n\n"
-            "👉 Please contact EnerginAI — Book a free demo:\n"
+            "👉 Please contact EnergInAI — Book a free demo:\n"
             "https://forms.gle/uAcYEV2r69HKPg3x7\n\n"
             "Our team will reach out to you soon."
         )
@@ -61,7 +61,7 @@ def generate_answer(query, context, client_ip="unknown"):
     if not context.strip():
         return (
             "Not found in knowledge base.\n\n"
-            "👉 Please contact EnerginAI — Book a free demo:\n"
+            "👉 Please contact EnergInAI — Book a free demo:\n"
             "https://forms.gle/uAcYEV2r69HKPg3x7"
         )
 
@@ -97,7 +97,7 @@ Your answer:
     if "not found" in text.lower():
         return (
             "Not found in knowledge base.\n\n"
-            "👉 Please contact EnerginAI — Book a free demo:\n"
+            "👉 Please contact EnergInAI — Book a free demo:\n"
             "https://forms.gle/uAcYEV2r69HKPg3x7"
         )
 
