@@ -23,12 +23,12 @@ def check_rate_limit(client_ip: str) -> bool:
     now = time.time()
     state = rate_state.get(client_ip)
 
-    # First query
+    # First query for this IP
     if state is None:
         rate_state[client_ip] = {"count": 1, "reset_at": now + RESET_TIME}
         return True
 
-    # Reset window
+    # Reset window if expired
     if now > state["reset_at"]:
         rate_state[client_ip] = {"count": 1, "reset_at": now + RESET_TIME}
         return True
@@ -37,7 +37,7 @@ def check_rate_limit(client_ip: str) -> bool:
     if state["count"] >= QUERY_LIMIT:
         return False
 
-    # Allow
+    # Allow + increment
     state["count"] += 1
     return True
 
@@ -51,20 +51,24 @@ def generate_answer(query, context, client_ip="unknown"):
     # -------- RATE LIMIT CHECK --------
     if not check_rate_limit(client_ip):
         return (
-            "⚠️ You have reached your free query limit for now.\n\n"
-            "👉 Please book a free EnergInAI demo:\n"
-            "https://www.energinai.com/get-started\n\n"
+            "⚠️ You have reached your free query limit for now.<br><br>"
+            "👉 Please book a free EnergInAI demo:<br>"
+            "<a href='https://www.energinai.com/get-started' target='_blank' "
+            "style='color:#1a56db; text-decoration:underline; font-weight:600;'>"
+            "Click here to get started</a><br><br>"
             "Our team will reach out to you soon."
         )
 
-    # -------- NO CONTEXT (NO MATCH) --------
+    # -------- NO CONTEXT (NO MATCH FOUND IN RAG) --------
     if not context.strip():
         return (
-            "👉 Please book a free EnergInAI demo to get assistance:\n"
-            "https://www.energinai.com/get-started"
+            "👉 Please book a free EnergInAI demo to get assistance:<br>"
+            "<a href='https://www.energinai.com/get-started' target='_blank' "
+            "style='color:#1a56db; text-decoration:underline; font-weight:600;'>"
+            "Click here to get started</a>"
         )
 
-    # -------- GENERATE ANSWER --------
+    # -------- GENERATE ANSWER WITH CONTEXT --------
     prompt = f"""
 You are a strict RAG chatbot.
 Use ONLY the context provided below to answer the question.
@@ -93,11 +97,13 @@ Your answer:
         print("Gemini ERROR:", e)
         return "Sorry, something went wrong while generating the response."
 
-    # -------- LLM SAYS NO MATCH --------
+    # -------- NOT FOUND IN KNOWLEDGE BASE --------
     if "not_available" in text.lower():
         return (
-            "👉 Please book a free EnergInAI demo to get assistance:\n"
-            "https://www.energinai.com/get-started"
+            "👉 Please book a free EnergInAI demo to get assistance:<br>"
+            "<a href='https://www.energinai.com/get-started' target='_blank' "
+            "style='color:#1a56db; text-decoration:underline; font-weight:600;'>"
+            "Click here to get started</a>"
         )
 
     return text
