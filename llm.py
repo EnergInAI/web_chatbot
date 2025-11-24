@@ -11,33 +11,33 @@ genai.configure(api_key=GEMINI_API_KEY)
 QUERY_LIMIT = 5               # free queries allowed per IP
 RESET_TIME = 6 * 60 * 60      # 6 hours in seconds
 
-# store rate usage per client_ip:
-#   rate_state[ip] = { "count": X, "reset_at": timestamp }
+# rate_state[ip] = { "count": X, "reset_at": timestamp }
 rate_state = {}
-rate_lock = False  # primitive lock to avoid overwriting (sufficient for single-threaded Render)
+rate_lock = False
+
 
 def check_rate_limit(client_ip: str) -> bool:
-    """Returns True if user is allowed, False if limit reached."""
+    """Returns True if allowed, False if limit reached."""
     global rate_lock
 
     now = time.time()
     state = rate_state.get(client_ip)
 
-    # First time this IP appears
+    # First query
     if state is None:
         rate_state[client_ip] = {"count": 1, "reset_at": now + RESET_TIME}
         return True
 
-    # Reset the window if expired
+    # Reset window
     if now > state["reset_at"]:
         rate_state[client_ip] = {"count": 1, "reset_at": now + RESET_TIME}
         return True
 
-    # Block if limit reached
+    # Limit reached
     if state["count"] >= QUERY_LIMIT:
         return False
 
-    # Otherwise allow & increment
+    # Allow
     state["count"] += 1
     return True
 
@@ -52,16 +52,16 @@ def generate_answer(query, context, client_ip="unknown"):
     if not check_rate_limit(client_ip):
         return (
             "⚠️ You have reached your free query limit for now.\n\n"
-            "👉 Please contact EnergInAI — Book a free demo:\n"
-            "https://forms.gle/uAcYEV2r69HKPg3x7\n\n"
+            "👉 Please book a free EnergInAI demo:\n"
+            "https://www.energinai.com/get-started\n\n"
             "Our team will reach out to you soon."
         )
 
-    # -------- RAG CONTEXT CHECK --------
+    # -------- NO CONTEXT (NO MATCH) --------
     if not context.strip():
         return (
-            "👉 Please contact EnergInAI — Book a free demo:\n"
-            "https://forms.gle/uAcYEV2r69HKPg3x7"
+            "👉 Please book a free EnergInAI demo to get assistance:\n"
+            "https://www.energinai.com/get-started"
         )
 
     # -------- GENERATE ANSWER --------
@@ -79,7 +79,7 @@ RULES:
 1. Do NOT use outside knowledge.
 2. Do NOT guess anything.
 3. If the answer is not present in the context, reply EXACTLY:
-   "Not found in knowledge base."
+   "NOT_AVAILABLE"
 4. Only use English language.
 
 Your answer:
@@ -93,10 +93,11 @@ Your answer:
         print("Gemini ERROR:", e)
         return "Sorry, something went wrong while generating the response."
 
-    if "not found" in text.lower():
+    # -------- LLM SAYS NO MATCH --------
+    if "not_available" in text.lower():
         return (
-            "👉 Please contact EnergInAI — Book a free demo:\n"
-            "https://forms.gle/uAcYEV2r69HKPg3x7"
+            "👉 Please book a free EnergInAI demo to get assistance:\n"
+            "https://www.energinai.com/get-started"
         )
 
     return text
