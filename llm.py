@@ -60,7 +60,6 @@ def generate_answer(query, context, client_ip="unknown"):
     # -------- RAG CONTEXT CHECK --------
     if not context.strip():
         return (
-            "Not found in knowledge base.\n\n"
             "👉 Please contact EnergInAI — Book a free demo:\n"
             "https://forms.gle/uAcYEV2r69HKPg3x7"
         )
@@ -96,7 +95,6 @@ Your answer:
 
     if "not found" in text.lower():
         return (
-            "Not found in knowledge base.\n\n"
             "👉 Please contact EnergInAI — Book a free demo:\n"
             "https://forms.gle/uAcYEV2r69HKPg3x7"
         )
