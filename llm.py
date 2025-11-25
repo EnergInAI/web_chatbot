@@ -48,7 +48,29 @@ def check_rate_limit(client_ip: str) -> bool:
 
 def generate_answer(query, context, client_ip="unknown"):
 
-    # -------- RATE LIMIT CHECK --------
+    # ==========================================
+    #  GREETING HANDLER (added patch)
+    # ==========================================
+    greetings = {
+        "hi", "hii", "hello", "hey", "hiya", "yo", "hola",
+        "hi there", "hello there", "hey there",
+        "good morning", "good afternoon", "good evening",
+        "howdy", "greetings",
+        "hi assistant", "hello assistant", "hey assistant"
+    }
+
+    q = query.lower().strip()
+
+    # If the user input matches a greeting → return welcome message
+    if q in greetings:
+        return (
+            "Hello Smart Consumer, Welcome to EnergInAI! "
+            "How may I assist you today?"
+        )
+
+    # ==========================================
+    # RATE LIMIT CHECK
+    # ==========================================
     if not check_rate_limit(client_ip):
         return (
             "⚠️ You have reached your free query limit for now.<br><br>"
@@ -59,7 +81,9 @@ def generate_answer(query, context, client_ip="unknown"):
             "Our team will reach out to you soon."
         )
 
-    # -------- NO CONTEXT (NO MATCH FOUND IN RAG) --------
+    # ==========================================
+    # NO CONTEXT (NOT FOUND IN RAG)
+    # ==========================================
     if not context.strip():
         return (
             "👉 Please book a free EnergInAI demo to get assistance:<br>"
@@ -68,7 +92,9 @@ def generate_answer(query, context, client_ip="unknown"):
             "Click here to get started</a>"
         )
 
-    # -------- GENERATE ANSWER WITH CONTEXT --------
+    # ==========================================
+    # GENERATE ANSWER WITH CONTEXT
+    # ==========================================
     prompt = f"""
 You are a strict RAG chatbot.
 Use ONLY the context provided below to answer the question.
@@ -93,11 +119,14 @@ Your answer:
         model = genai.GenerativeModel(CHAT_MODEL)
         response = model.generate_content(prompt)
         text = response.text.strip()
+
     except Exception as e:
         print("Gemini ERROR:", e)
         return "Sorry, something went wrong while generating the response."
 
-    # -------- NOT FOUND IN KNOWLEDGE BASE --------
+    # ==========================================
+    # RESPONSE NOT FOUND IN KNOWLEDGE BASE
+    # ==========================================
     if "not_available" in text.lower():
         return (
             "👉 Please book a free EnergInAI demo to get assistance:<br>"
@@ -106,4 +135,7 @@ Your answer:
             "Click here to get started</a>"
         )
 
+    # ==========================================
+    # RETURN LEGIT MODEL ANSWER
+    # ==========================================
     return text
